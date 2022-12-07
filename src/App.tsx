@@ -1,4 +1,6 @@
 import Button from "./components/Button";
+import Section from "./components/Section";
+import Header from "./components/Header";
 
 const navLinks: { label: string; path: string }[] = [
   { label: "about", path: "/about" },
@@ -7,8 +9,8 @@ const navLinks: { label: string; path: string }[] = [
 ];
 function App() {
   return (
-    <div className="bg-gray-900 h-screen w-screen text-white">
-      <header className="flex justify-between absolute top-0 left-0 w-screen p-8">
+    <div className="bg-gray-900 text-white">
+      <Header>
         <a href="/" className="font-bold text-3xl relative">
           VH<span className="text-xs text-sky-400 font-mono">.dev</span>
         </a>
@@ -20,9 +22,9 @@ function App() {
             </a>
           ))}
         </nav>
-      </header>
+      </Header>
 
-      <div className="grid grid-cols-12 max-w-7xl h-screen mx-auto items-center">
+      <Section>
         <div className="col-span-8 col-start-3">
           <p className="font-mono text-sky-400">
             Hi, my name is Václav Hervert.
@@ -38,7 +40,7 @@ function App() {
           <Button classes="block" label="More about me" />
           <Button classes="block" label="Check my projects" />
         </div>
-      </div>
+      </Section>
     </div>
   );
 }
