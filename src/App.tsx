@@ -13,9 +13,10 @@ function App() {
           VH<span className="text-xs text-sky-400 font-mono">.dev</span>
         </a>
         <nav className="font-mono text-sm">
-          {navLinks.map((link, index) => (
-            <a href={link.path} className="px-4">
-              <span className="text-sky-400">0{index + 1}.</span> {link.label}
+          {navLinks.map((link) => (
+            <a key={link.label} href={link.path} className="px-4">
+              <span className="text-sky-400">/</span>
+              {link.label}
             </a>
           ))}
         </nav>
@@ -27,14 +28,15 @@ function App() {
             Hi, my name is Václav Hervert.
           </p>
           <h1 className="text-6xl font-bold py-6 font-display">
-            I'm a frontend developer,
+            I'm a frontend developer
           </h1>
           <p className="max-w-xl leading-7 mb-8">
             with an overflow to backend development and UX in heart. Pushing
             buttons to create something great for more than a decade. Currently
-            looking for new challenges.
+            freelancing and looking for new challenges.
           </p>
-          <Button label="Check out my projects" />
+          <Button classes="block" label="More about me" />
+          <Button classes="block" label="Check my projects" />
         </div>
       </div>
     </div>
