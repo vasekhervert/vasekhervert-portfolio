@@ -1,10 +1,8 @@
-import React from "react";
-
-type Props = {
+interface Props {
   //children: JSX.Element;
   label: string;
   classes: string;
-};
+}
 
 export default function Button({ label, classes }: Props) {
   return (
