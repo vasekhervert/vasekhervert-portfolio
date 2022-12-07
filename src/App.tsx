@@ -24,7 +24,7 @@ function App() {
         </nav>
       </Header>
 
-      <Section>
+      <Section id="home">
         <div className="col-span-8 col-start-3">
           <p className="font-mono text-sky-400">
             Hi, my name is Václav Hervert.
@@ -40,6 +40,10 @@ function App() {
           <Button classes="block" label="More about me" />
           <Button classes="block" label="Check my projects" />
         </div>
+      </Section>
+
+      <Section id="about">
+        <div>about</div>
       </Section>
     </div>
   );
