@@ -1,7 +1,8 @@
 import Section from "./components/Section";
 import Header from "./components/Header";
-import { experiences } from "./constants";
+import { experiences, projects } from "./constants";
 import Experience from "./components/Experience";
+import Project from "./components/Project";
 
 const navLinks: { label: string; path: string }[] = [
   { label: "about", path: "/about" },
@@ -28,9 +29,7 @@ function App() {
       <div className="max-w-lg mx-auto py-28 px-8 text-sm">
         <Section id="head">
           <div className="grid grid-cols-4 gap-4 items-center">
-            <div className="">
-              <img className="rounded-full" src="/avatar.jpg" alt="" />
-            </div>
+            <img className="rounded-full" src="/avatar.jpg" alt="" />
             <div className="col-span-3 leading-8">
               <h1 className="text-xl mb-1">Václav Hervert</h1>
               <p className="text-sm text-gray-400">
@@ -74,19 +73,22 @@ function App() {
 
         <Section id="projects">
           <h2 className="text-sm mb-8">Featured Projects</h2>
+          {projects.map((project) => (
+            <Project
+              title={project.title}
+              year={project.year}
+              link={project.link}
+              description={project.description}
+              techstack={project.techstack}
+              github={project.github}
+            />
+          ))}
         </Section>
 
-        <Section id="techstack">
-          <h2 className="text-sm mb-2">These days I mostly work with</h2>
-          <p className="text-sm text-gray-400">
-            JavaScript (ES6+) / TypeScript / React / Next.js / TailwindCSS /
-            Firebase / Node.js / Express.js / Git / Jest
-          </p>
-        </Section>
         {/* <p className="text-xs max-w-xl leading-7 mb-8 text-gray-400">
           Special thanks for support in my beginnings goes to{" "}
           <a href="https://allien.work/" target="_blank" rel="noreferrer">
-            Martin Allien
+            Martin Allien http://simpled.cz/_client/zimovani/ceny-zimovani-lodi.html
           </a>{" "}
           and{" "}
           <a
