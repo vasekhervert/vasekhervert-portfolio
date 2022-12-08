@@ -1,15 +1,17 @@
-import Button from "./components/Button";
 import Section from "./components/Section";
 import Header from "./components/Header";
+import { experiences } from "./constants";
+import Experience from "./components/Experience";
 
 const navLinks: { label: string; path: string }[] = [
   { label: "about", path: "/about" },
   { label: "projects", path: "/projects" },
   { label: "contact", path: "/contact" },
 ];
+
 function App() {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-black text-white">
       <Header>
         <a href="/" className="font-bold text-3xl relative">
           VH<span className="text-xs text-sky-400 font-mono">.dev</span>
@@ -23,73 +25,80 @@ function App() {
           ))}
         </nav>
       </Header>
-
-      <Section id="home">
-        <div className="col-span-8 col-start-3">
-          <p className="font-mono text-sky-400">
-            Hi, my name is Václav Hervert.
-          </p>
-          <h1 className="text-6xl font-bold py-6 font-display">
-            I'm a frontend developer
-          </h1>
-          <p className="max-w-xl leading-7 mb-8">
-            with an overflow to backend development and UX in heart. Pushing
-            buttons to create something great for more than a decade. Currently
-            freelancing and looking for new challenges.
-          </p>
-          <Button classes="block" label="More about me" />
-          <Button classes="block" label="Check my projects" />
-        </div>
-      </Section>
-
-      <Section id="about">
-        <div className="col-span-8 col-start-3">
-          <h2 className="font-mono text-sky-400 mb-4 text-xl">About me</h2>
-          <p className="max-w-xl leading-7 mb-8">
-            Hello there! My name is Václav and I'm a frondend developer. I love
-            to develop useful products, improve them based on user metrics and
-            watch them grow.
-          </p>
-          <p className="max-w-xl leading-7 mb-8">
-            With more than a decade of experience in web design and development,
-            I have a strong background in frontend technologies and a nice feel
-            for UX.
-          </p>
-          <p className="max-w-xl leading-7 mb-4">
-            Lately I worked with these technologies:
-          </p>
-          <div className="grid grid-cols-2 max-w-xl mb-8">
-            <ul className="text-sm leading-7">
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>TailwindCSS</li>
-              <li>Node.js</li>
-            </ul>
-            <ul className="text-sm leading-7">
-              <li>TypeScript</li>
-              <li>Next.js</li>
-              <li>Firebase</li>
-              <li>Express.js</li>
-            </ul>
+      <div className="max-w-lg mx-auto py-28 px-8 text-sm">
+        <Section id="head">
+          <div className="grid grid-cols-4 gap-4 items-center">
+            <div className="">
+              <img className="rounded-full" src="/avatar.jpg" alt="" />
+            </div>
+            <div className="col-span-3 leading-8">
+              <h1 className="text-xl mb-1">Václav Hervert</h1>
+              <p className="text-sm text-gray-400">
+                a frontend developer
+                <span className="block text-sm text-gray-500">
+                  based in{" "}
+                  <a
+                    href="https://en.wikipedia.org/wiki/Bohemian_Forest"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Bohemian Forest
+                  </a>
+                </span>
+              </p>
+            </div>
           </div>
+        </Section>
 
-          <p className="text-xs max-w-xl leading-7 mb-8">
-            Special thanks for support in my beginnings goes to{" "}
-            <a href="https://allien.work/" target="_blank" rel="noreferrer">
-              Martin Allien
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://www.linkedin.com/in/ji%C5%99%C3%AD-cerhan-02b30332/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Jiří Cerhan
-            </a>
-            . Thank you, guys!
+        <Section id="aboutme">
+          <h2 className="text-sm mb-2">About me</h2>
+          <p className="text-sm text-gray-400">
+            I love to develop useful products and improve them based on user
+            metrics. With over a decade of experience in web design and
+            development, I have a strong background in frontend technologies and
+            a nice feel for UX.
           </p>
-        </div>
-      </Section>
+        </Section>
+
+        <Section id="experience">
+          <h2 className="text-sm mb-8">Work experience</h2>
+          {experiences.map((ex) => (
+            <Experience
+              range={ex.range}
+              text={ex.text}
+              title={ex.title}
+              link={ex.link}
+            />
+          ))}
+        </Section>
+
+        <Section id="projects">
+          <h2 className="text-sm mb-8">Featured Projects</h2>
+        </Section>
+
+        <Section id="techstack">
+          <h2 className="text-sm mb-2">These days I mostly work with</h2>
+          <p className="text-sm text-gray-400">
+            JavaScript (ES6+) / TypeScript / React / Next.js / TailwindCSS /
+            Firebase / Node.js / Express.js / Git / Jest
+          </p>
+        </Section>
+        {/* <p className="text-xs max-w-xl leading-7 mb-8 text-gray-400">
+          Special thanks for support in my beginnings goes to{" "}
+          <a href="https://allien.work/" target="_blank" rel="noreferrer">
+            Martin Allien
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.linkedin.com/in/ji%C5%99%C3%AD-cerhan-02b30332/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Jiří Cerhan
+          </a>
+          . Thank you, guys!
+        </p> */}
+      </div>
     </div>
   );
 }
