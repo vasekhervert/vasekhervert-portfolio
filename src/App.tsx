@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { experiences, projects } from "./constants";
 import Experience from "./components/Experience";
 import Project from "./components/Project";
+import { LinkIcon } from "./components/icons";
 
 const navLinks: { label: string; path: string }[] = [
   { label: "about", path: "/about" },
@@ -43,6 +44,7 @@ function App() {
                   >
                     Bohemian Forest
                   </a>
+                  <LinkIcon classes="inline max-w-4 max-h-4 ml-1" />
                 </span>
               </p>
             </div>

@@ -1,3 +1,5 @@
+import { LinkIcon } from "./icons";
+
 interface Props {
   range: string;
   title: string;
@@ -14,6 +16,7 @@ export default function Experience({ range, title, text, link }: Props) {
         {link ? (
           <a href={link} target="_blank" rel="noreferrer">
             {title}
+            <LinkIcon classes="inline max-w-4 max-h-4 ml-1" />
           </a>
         ) : (
           title

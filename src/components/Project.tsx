@@ -1,4 +1,4 @@
-import { Github, Link } from "./icons";
+import { GithubIcon, LinkIcon } from "./icons";
 
 interface Props {
   year: string;
@@ -22,16 +22,14 @@ export default function Project({
       <p className="mb-2">
         <span className="text-gray-500 mr-2">{year}</span>
         <span className="text-sky-300 mr-2">–</span>
-        {title}
-        {link && (
-          <a href={link} target="_blank" rel="noreferrer">
-            <Link classes="inline ml-2 max-w-4 max-h-4 fill-white" />
+
+        {link ? (
+          <a href={link}>
+            {title}
+            <LinkIcon classes="inline max-w-4 max-h-4 ml-1" />
           </a>
-        )}
-        {github && (
-          <a href={github} target="_blank" rel="noreferrer">
-            <Github classes="inline ml-2 max-w-4 max-h-4 fill-white" />
-          </a>
+        ) : (
+          <span>{title}</span>
         )}
       </p>
 
@@ -43,6 +41,16 @@ export default function Project({
           {idx < techstack.length - 1 ? " | " : ""}
         </span>
       ))}
+      {github && (
+        <a
+          href={github}
+          target="_blank"
+          rel="noreferrer"
+          className="ml-2 rounded-sm px-2 py-1.5 hover:bg-gray-900 transition-all"
+        >
+          <GithubIcon classes="inline-block max-w-4 max-h-4" />
+        </a>
+      )}
     </div>
   );
 }
