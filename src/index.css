@@ -27,3 +27,8 @@ p a:hover {
   text-decoration: none;
   color: #38bdf8;
 }
+
+a svg {
+  max-width: 1rem;
+  max-height: 1rem;
+}

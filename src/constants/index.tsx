@@ -6,7 +6,7 @@ export const experiences: {
 }[] = [
   {
     range: "2017 - present",
-    title: "Frontend dev - Freelance",
+    title: "Frontend developer - Freelance",
     text: "Building apps that help my clients to fulfill their bussiness goals. Work with technologies like React, JavaScript ES6+, Firebase, TailwindCSS, Next.js, Node.js and others. Constantly learning more.",
   },
   {
