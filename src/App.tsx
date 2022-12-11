@@ -80,6 +80,12 @@ function App() {
               >
                 <TwitterIcon classes="block mx-auto" />
               </a>
+              <a
+                href="mailto:vaclav@hervert.dev"
+                className="p-2 ml-2 rounded-sm hover:bg-gray-900 transition-all"
+              >
+                vaclav@hervert.dev
+              </a>
             </Section>
           </div>
         </div>
