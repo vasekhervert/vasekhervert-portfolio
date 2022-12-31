@@ -48,7 +48,7 @@ export const projects: {
   {
     title: "Boat storage price calculator",
     year: "2021",
-    link: "http://simpled.cz/_client/zimovani/ceny-zimovani-lodi.html",
+    link: "https://hervert.dev/demo/zimovani/",
     description:
       "A small web app, where users can calculate their boat storage price, download the details in PDF or request an offer.",
     techstack: ["React", "Firebase"],
@@ -65,7 +65,7 @@ export const projects: {
     year: "2022",
     description: "A first person shooter game inspired by aim400kg.ru.",
     techstack: ["React", "SCSS"],
-    link: "http://simpled.cz/_client/zimovani/ceny-zimovani-lodi.html",
+    link: "https://hervert.dev/demo/aim-practice",
     github: "https://github.com/vasekhervert/aim-practice",
   },
 ];
