@@ -1,5 +1,4 @@
 import Section from "./components/Section";
-import Header from "./components/Header";
 import { experiences, projects } from "./constants";
 import Experience from "./components/Experience";
 import Project from "./components/Project";
@@ -9,12 +8,6 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from "./components/icons";
-
-const navLinks: { label: string; path: string }[] = [
-  { label: "about", path: "/about" },
-  { label: "projects", path: "/projects" },
-  { label: "contact", path: "/contact" },
-];
 
 function App() {
   return (
