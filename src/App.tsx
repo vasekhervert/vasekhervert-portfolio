@@ -12,7 +12,7 @@ import {
 function App() {
   return (
     <div className="bg-black text-white">
-      <div className="max-w-7xl mx-auto py-28 px-8 text-sm grid grid-cols-12 gap-8">
+      <div className="max-w-7xl mx-auto py-28 px-8 text-sm grid grid-cols-12 sm:gap-2 md:gap-8">
         <div className="col-span-12 md:col-span-6 lg:col-span-5 lg:col-start-2 relative">
           <div className="md:sticky top-28">
             <Section id="head">
