@@ -5,6 +5,12 @@ export const experiences: {
   link?: string;
 }[] = [
   {
+    range: "Feb 2023 - present",
+    title: "Frontend developer - iD-Sign",
+    link: "https://www.id-sign.com/",
+    text: "Development of fast growing online platform for trading in agricultural commodities.",
+  },
+  {
     range: "2017 - present",
     title: "Frontend developer - Freelance",
     text: "Building apps that help my clients to fulfill their bussiness goals. Work with technologies like React, JavaScript ES6+, Firebase, TailwindCSS, Next.js, Node.js and others. Constantly learning more.",
