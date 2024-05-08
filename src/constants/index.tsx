@@ -8,7 +8,7 @@ export const experiences: {
     range: "Feb 2023 - present",
     title: "Frontend developer - iD-Sign",
     link: "https://www.id-sign.com/",
-    text: "Development of fast growing online platform for trading in agricultural commodities.",
+    text: "Development of various projects such as digitalnisklady.cz, Škola s nadhledem, realitkanapodily.cz and more.",
   },
   {
     range: "2017 - present",
