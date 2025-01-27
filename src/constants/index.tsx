@@ -5,15 +5,21 @@ export const experiences: {
   link?: string;
 }[] = [
   {
-    range: "Feb 2023 - present",
-    title: "Frontend developer - iD-Sign",
-    link: "https://www.id-sign.com/",
-    text: "Development of various projects such as digitalnisklady.cz, Škola s nadhledem, realitkanapodily.cz and more.",
+    range: "Sep 2024 - present",
+    title: "Fullstack developer - Sikmo",
+    link: "https://www.sikmo.cz/",
+    text: "FE Development of various projects such as digitalnisklady.cz, Škola s nadhledem, realitkanapodily.cz and more. Worked mainly with React, Next.js and GraphQl.",
   },
   {
-    range: "2017 - present",
-    title: "Frontend developer - Freelance",
-    text: "Building apps that help my clients to fulfill their bussiness goals. Work with technologies like React, JavaScript ES6+, Firebase, TailwindCSS, Next.js, Node.js and others. Constantly learning more.",
+    range: "Feb 2023 - Jul 2024",
+    title: "Frontend developer - iD-Sign",
+    link: "https://www.id-sign.com/",
+    text: "FE Development of various projects such as digitalnisklady.cz, Škola s nadhledem, realitkanapodily.cz and more. Worked mainly with React, Next.js and GraphQl.",
+  },
+  {
+    range: "2016 - present",
+    title: "Fulstack developer - Freelance",
+    text: "Building apps that help my clients to fulfill their bussiness goals. Work with technologies like React, Next.js, MongoDB,Firebase, TailwindCSS, Nest.js, GraphQl and such. Constantly learning more.",
   },
   {
     range: "2016 - 2018",
@@ -73,5 +79,13 @@ export const projects: {
     techstack: ["React", "SCSS"],
     link: "https://hervert.dev/demo/aim-practice",
     github: "https://github.com/vasekhervert/aim-practice",
+  },
+  {
+    title: "MHL - Malá hokejová liga",
+    year: "2024",
+    description:
+      "A website for a local ice hockey league along with a complex league management system that allows to manage teams, players or matches and automatize standings or statistics computing and rendering graphics for social media.",
+    techstack: ["Next.js", "TailwindCSS", "Nest.js", "GraphQL", "MongoDB"],
+    link: "https://malahokejovaliga.cz",
   },
 ];

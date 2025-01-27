@@ -21,7 +21,7 @@ function App() {
                 <div className="col-span-3 leading-8">
                   <h1 className="text-xl mb-1">Václav Hervert</h1>
                   <p className="text-sm text-gray-400">
-                    a frontend developer
+                    a fullstack developer
                     <span className="block text-sm text-gray-500">
                       based in{" "}
                       <a
@@ -41,10 +41,7 @@ function App() {
             <Section id="aboutme">
               <h2 className="text-sm mb-2">About me</h2>
               <p className="text-sm text-gray-400">
-                I love to develop useful products and improve them based on user
-                metrics. With over a decade of experience in web design and
-                development, I have a strong background in frontend technologies
-                and a nice feel for UX.
+                What can I say? I just love to code and learn new technologies.
               </p>
             </Section>
 
@@ -98,7 +95,7 @@ function App() {
 
           <Section id="projects">
             <h2 className="text-sm mb-8">Featured Projects</h2>
-            {projects.map((project) => (
+            {projects.reverse().map((project) => (
               <Project
                 title={project.title}
                 year={project.year}
@@ -108,25 +105,6 @@ function App() {
                 github={project.github}
               />
             ))}
-          </Section>
-
-          <Section id="kudos">
-            <h2 className="text-sm mb-8">Kudos</h2>
-            <p className="text-xs max-w-xl leading-7 mb-8 text-gray-400">
-              Special thanks for support in my beginnings goes to{" "}
-              <a href="https://allien.work/" target="_blank" rel="noreferrer">
-                Martin Allien
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://www.linkedin.com/in/ji%C5%99%C3%AD-cerhan-02b30332/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Jiří Cerhan
-              </a>
-              . Thank you, guys!
-            </p>
           </Section>
         </div>
       </div>
